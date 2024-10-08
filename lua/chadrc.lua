@@ -4,8 +4,14 @@ local options = {
 
   base46 = {
     theme = "tokyonight", -- default theme
-    hl_add = {},
-    hl_override = {},
+    hl_add = {
+      LineNr = { fg = "#d5875c" },
+      CursorLineNr = { fg = "#ffffff" },
+    },
+    hl_override = {
+      Comment = { fg = "#5c6370", italic = true },
+      Identifier = { italic = true },
+    },
     integrations = {},
     changed_themes = {},
     transparency = true,
@@ -56,7 +62,7 @@ local options = {
       " MM.   ,M9 8M   MM    MM       MM       MM YA.   ,A9 L.   I8    ,V' VA.   ",
       " P^YbmdP'  `Moo9^Yo..JMML.   .JMML.   .JMML.`Ybmd9'  M9mmmP'  .AM.   .MA. ",
       "                                                                      ",
-                          "     Powered By eovim    ",
+      "     Powered By eovim    ",
     },
 
     buttons = {
