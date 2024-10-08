@@ -5,8 +5,8 @@ local options = {
   base46 = {
     theme = "tokyonight", -- default theme
     hl_add = {
-      LineNr = { fg = "#d5875c" },
-      CursorLineNr = { fg = "#ffffff" },
+      LineNr = { fg = "#d0be98" },
+      CursorLineNr = { fg = "#87d9e8" },
     },
     hl_override = {
       Comment = { fg = "#5c6370", italic = true },
