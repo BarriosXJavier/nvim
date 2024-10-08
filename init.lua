@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 vim.transparent_window = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
-vim.opt.termguicolors = true
 
 vim.cmd [[
   highlight Normal guibg=NONE ctermbg=NONE
