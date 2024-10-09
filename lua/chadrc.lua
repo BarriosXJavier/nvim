@@ -10,7 +10,6 @@ local options = {
     },
     hl_override = {
       Comment = { fg = "#5c6370", italic = true },
-      Identifier = { italic = true },
     },
     integrations = {},
     changed_themes = {},
