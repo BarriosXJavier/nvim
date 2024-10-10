@@ -24,8 +24,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
---vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
-
 -- load plugins
 require("lazy").setup({
   {
@@ -60,12 +58,13 @@ require("lazy").setup({
   },
 
   {
-    "nvchad/volt", lazy = true,
+    "nvchad/volt",
+    lazy = true,
     -- require("menu").open(options, opts);
   },
 
 
-  { "nvchad/menu", lazy = true },
+  { "nvchad/menu",     lazy = true },
 
   { import = "plugins" },
 }, lazy_config)

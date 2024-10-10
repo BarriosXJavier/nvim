@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- uncomment for format on save
+    event = { "BufWritePre", "BufNewFile" },
     opts = require "configs.conform",
   },
 
@@ -25,7 +25,7 @@ return {
     },
   },
 
-  { "wakatime/vim-wakatime", lazy = false },
+  { "wakatime/vim-wakatime",            lazy = false },
 
   {
     "Exafunction/codeium.vim",
@@ -67,7 +67,7 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^4", -- Recommended
-    lazy = false, -- This plugin is already lazy
+    lazy = false,   -- This plugin is already lazy
   },
 
   {
@@ -77,7 +77,33 @@ return {
 
   { "nvim-tree/nvim-web-devicons" },
 
-  { "nvchad/volt", lazy = true },
+  { "nvchad/volt",                lazy = true },
 
-  { "nvchad/menu", lazy = true },
+  { "nvchad/menu",                lazy = true },
+
+  {
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {
+        enabled = true,
+        execution_message = {
+          message = function() return "AutoSaved at " .. vim.fn.strftime("%H:%M:%S") end,
+          dim = 0.18,
+          cleaning_interval = 1000,
+          color = "LightGreen",
+        },
+        trigger_events = { "InsertLeave", "TextChanged" },
+        debounce_delay = 1000,
+        conditions = {
+          exists = true,
+          filename_is_not = {},
+          filetype_is_not = {},
+          modifiable = true
+        },
+        write_all_buffers = false,
+        on_off_commands = true,
+        clean_command_line_interval = 0,
+      }
+    end,
+  }
 }
