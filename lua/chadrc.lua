@@ -9,7 +9,7 @@ local options = {
       CursorLineNr = { fg = "#87d9e8" },
     },
     hl_override = {
-      Comment = { fg = "#5c6370", italic = true },
+      Comment = { fg = "#c0c0c0", italic = true },
     },
     integrations = {},
     changed_themes = {},
