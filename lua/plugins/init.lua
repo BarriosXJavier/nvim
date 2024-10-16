@@ -73,6 +73,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+
   },
 
   { "nvim-tree/nvim-web-devicons" },
@@ -105,5 +106,25 @@ return {
         clean_command_line_interval = 0,
       }
     end,
-  }
+  },
+
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1001, -- this plugin needs to run before anything else
+    opts = {
+      rocks = { "magick" },
+    },
+  },
+	{
+	 	"3rd/image.nvim",
+ 		dependencies = { "luarocks.nvim" },
+ 		config = function()
+ 		require("image").setup({
+ 		backend = "ueberzug",  -- ueberzug,
+ 		max_height_window_percentage = 50,
+ 		hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.svg" },
+ 		})
+	end
+	}
+
 }
