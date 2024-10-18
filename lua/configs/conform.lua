@@ -14,7 +14,9 @@ local options = {
     jsx = { "prettier" },
     tsx = { "prettier" },
     python = { "prettier" },
-    go = { "prettier" }
+    go = { "prettier" },
+    c = { "prettier" },
+    cpp = { "prettier" },
   },
 
   format_on_save = {

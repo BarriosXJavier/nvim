@@ -3,7 +3,7 @@
 local options = {
 
   base46 = {
-    theme = "tokyonight", -- default theme
+    theme = "catppuccin", -- default theme
     hl_add = {
       LineNr = { fg = "#d0be98" },
       CursorLineNr = { fg = "#87d9e8" },
@@ -14,7 +14,7 @@ local options = {
     integrations = {},
     changed_themes = {},
     transparency = true,
-    theme_toggle = { "tokyonight", "one_light" },
+    theme_toggle = { "catppuccin", "tokyonight" },
   },
 
   ui = {
